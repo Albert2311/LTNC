@@ -1,0 +1,2 @@
+﻿  xoa_vector.cpp
+D:\LTNC\Bai Tap Upcoder\Vector\xoa_vector\xoa_vector.cpp(9): error C4700: uninitialized local variable 'n' used

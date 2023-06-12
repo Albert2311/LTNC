@@ -1,0 +1,5 @@
+﻿  TEMPLATEHCN.cpp
+D:\LTNC\Bai Tap Upcoder\Template\TEMPLATEHCN\TEMPLATEHCN.cpp(92,1): error C2059: syntax error: '}'
+D:\LTNC\Bai Tap Upcoder\Template\TEMPLATEHCN\TEMPLATEHCN.cpp(92,2): message : see reference to class template instantiation 'Mang<T>' being compiled
+D:\LTNC\Bai Tap Upcoder\Template\TEMPLATEHCN\TEMPLATEHCN.cpp(92,1): error C2143: syntax error: missing ';' before '}'
+D:\LTNC\Bai Tap Upcoder\Template\TEMPLATEHCN\TEMPLATEHCN.cpp(92,1): error C2238: unexpected token(s) preceding ';'

@@ -1,0 +1,4 @@
+﻿  TEMPLATE1.cpp
+D:\LTNC\Template\TEMPLATE1\TEMPLATE1.cpp(293,21): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\LTNC\Template\TEMPLATE1\TEMPLATE1.cpp(315): message : see reference to function template instantiation 'double KCLN<Oxy>(Mang<Oxy>)' being compiled
+  TEMPLATE1.vcxproj -> D:\LTNC\Template\Debug\TEMPLATE1.exe

@@ -1,0 +1,100 @@
+// http://upcoder.xyz/'index.php/9e6fb381f0a06350f62c68f9904abcb0c45461ea66e9f58d51fb23ae5fde3d65/lvypJ''yRMoOMs!z5z'lBML4.skq'uMoxMfSbwdy'wmL3'?839A97%27h7gC~0!h6LLN9F5Di-@8F_g.b8eN8d.82/943f267d31378309d2f37cfad0bdd4e232bc991022a838b51916d69ee0a14132
+
+#include <bits/stdc++.h>
+using namespace std;
+
+struct Time {
+    int hour, minute, second;
+};
+istream& operator>> (istream& is, Time& t) {
+    char x;
+    is >> t.hour >> x >> t.minute >> x >> t.second;
+    return is;
+}
+ostream& operator<< (ostream& os, Time t) {
+    os << t.hour << ":";
+    os << setfill('0') << setw(2) << t.minute << ":";
+    os << setfill('0') << setw(2) << t.second;
+    return os;
+}
+Time operator+ (Time a, Time b) {
+    Time c;
+    c.hour = a.hour + b.hour;
+    c.minute = a.minute + b.minute;
+    c.second = a.second + b.second;
+    
+    if (c.second > 59) {
+        c.minute++;
+        c.second -= 60;
+    }
+    if (c.minute > 59) {
+        c.hour++;
+        c.minute -= 60;
+    }
+    
+    return c;
+}
+bool operator> (Time a, Time b) {
+    return  a.hour > b.hour ||
+            (a.hour == b.hour && a.minute > b.minute) ||
+            (a.hour == b.hour && a.minute == b.minute && a.second > b.second);
+}
+
+struct Activity {
+    string name, date;
+    Time time;
+};
+istream& operator>> (istream& is, Activity& a) {
+    is >> a.name >> a.date >> a.time;
+    return is;
+}
+ostream& operator<< (ostream& os, Activity a) {
+    os << a.name << " " << a.time;
+    return os;
+}
+bool giamDan(Activity a, Activity b) {
+    return a.time > b.time;
+}
+
+int main() {
+    ifstream in("input.txt");
+    ofstream out("output.txt");
+    
+    list<Activity> l;
+    Activity a;
+    while (in >> a) {
+        bool flag = 0;
+        for (list<Activity>::iterator it = l.begin(); it != l.end() ; it++) {
+            if (it->name == a.name) {
+                flag = 1;
+                it->time = it->time + a.time;
+            }
+        }
+        if (flag == 0)
+            l.push_back(a);
+    }
+    l.sort(giamDan);
+    out << l.size() << endl;
+    for (list<Activity>::iterator it = l.begin(); it != l.end() ; it++) 
+        out << *it << endl;
+    
+    in.close();
+    out.close();
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

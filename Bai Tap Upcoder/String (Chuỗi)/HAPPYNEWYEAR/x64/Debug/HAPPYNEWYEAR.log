@@ -1,0 +1,4 @@
+﻿  HAPPYNEWYEAR.cpp
+D:\LTNC\Bai Tap Upcoder\String (Chuỗi)\HAPPYNEWYEAR\HAPPYNEWYEAR.cpp(14,19): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+D:\LTNC\Bai Tap Upcoder\String (Chuỗi)\HAPPYNEWYEAR\HAPPYNEWYEAR.cpp(17,23): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+  HAPPYNEWYEAR.vcxproj -> D:\LTNC\Bai Tap Upcoder\String (Chuỗi)\x64\Debug\HAPPYNEWYEAR.exe
